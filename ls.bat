@@ -1,2 +1,3 @@
 @echo off
-dir
+for /f "delims=" %%F in ('dir /b') do <nul set /p "=%%F  "
+echo.
