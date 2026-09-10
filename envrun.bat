@@ -1,16 +1,16 @@
 @echo off
 setlocal
 
-if not exist venv (
+if not exist .venv (
     echo Creating virtual environment...
-    python -m venv venv
+    python -m venv .venv
 
-    call venv\Scripts\activate.bat
+    call .venv\Scripts\activate.bat
 
     echo Installing requirements...
     pip install -r requirements.txt
 ) else (
-    call venv\Scripts\activate.bat
+    call .venv\Scripts\activate.bat
 )
 
 echo Applying migrations...
